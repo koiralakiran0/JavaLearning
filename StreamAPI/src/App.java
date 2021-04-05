@@ -18,7 +18,7 @@ public class App {
 
         //creating classes from csv java 8
         List<User> userList = new ArrayList<>();
-        String path = "C:/Users/rkoirala/Documents/GitHub/Learning2021/StreamAPI/src/data.csv";
+        String path = "./src/data.csv";
         try (Stream<String> stream = Files.lines(Paths.get(path))) {
             userList = stream.map(line -> {
                     String[] tempArray = line.split(",");
